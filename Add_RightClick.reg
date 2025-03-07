@@ -1,7 +1,16 @@
 Windows Registry Editor Version 5.00
 
+; #########################################################
+; 在文件右键菜单中创建名为 "SuperSend" 的项
+; #########################################################
+
 [HKEY_CLASSES_ROOT\*\shell\SuperSend]
+; 设置菜单项图标（shell32.dll 是系统图标库，24 是随便找了一个比较好看的，也可以自己设置成别的数字看看对应什么系统图标）
 "Icon"="shell32.dll,24"
 
 [HKEY_CLASSES_ROOT\*\shell\SuperSend\command]
+; 定义点击菜单时执行的命令：
+;   - 调用 PowerShell 绕过执行策略
+;   - 运行 C:\Send-Mail.ps1 脚本
+;   - 传递当前选中的文件路径到 -Attachments 参数
 @="powershell.exe -ExecutionPolicy Bypass -File \"C:\\Send-Mail.ps1\" -Attachments \"%1\""
