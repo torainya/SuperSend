@@ -11,6 +11,6 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\*\shell\SuperSend\command]
 ; 定义点击菜单时执行的命令：
 ;   - 调用 PowerShell 绕过执行策略
-;   - 运行 C:\Send-Mail.ps1 脚本
+;   - 运行 Send-Mail.ps1 脚本,路径默认是 C:\\Send-Mail.ps1\ 有需要可自己改
 ;   - 传递当前选中的文件路径到 -Attachments 参数
-@="powershell.exe -ExecutionPolicy Bypass -File \"C:\\Send-Mail.ps1\" -Attachments \"%1\""
+@="powershell.exe -ExecutionPolicy Bypass -File \"C:\\Send-Mail.ps1\" -Attachments \"%1\""       
