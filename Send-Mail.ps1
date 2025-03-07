@@ -5,11 +5,11 @@ param(
 )
 
 # ====================== 邮件服务器配置 ======================
-$EmailFrom = "dongluhao@qq.com"       # 发件人QQ邮箱（需开启SMTP服务）
-$EmailTo = "luhao.dong@mdk.icbc.com.cn"  # 收件人邮箱
+$EmailFrom = "xxx@qq.com"       # 发件人QQ邮箱（需开启SMTP服务）
+$EmailTo = "xxx@qq.com"  # 收件人邮箱
 $Subject = "自动发送的文件"              # 邮件主题
 $Body = "附件已送达，请查收。"           # 邮件正文内容
-$SMTPPassword = "rfgztymsuzyrbhig"    # QQ邮箱授权码（非登录密码）
+$SMTPPassword = "xxx"    # QQ邮箱授权码（非登录密码）
 $SMTPServer = "smtp.qq.com"           # QQ邮箱SMTP服务器地址
 $SMTPPort = 587                       # 使用TLS加密的端口
 
