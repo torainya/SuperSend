@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\SuperSend]
+"Icon"="shell32.dll,24"
+
+[HKEY_CLASSES_ROOT\*\shell\SuperSend\command]
+@="powershell.exe -ExecutionPolicy Bypass -File \"C:\\Send-Mail.ps1\" -Attachments \"%1\""
